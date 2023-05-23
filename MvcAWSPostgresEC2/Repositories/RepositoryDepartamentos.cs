@@ -18,7 +18,7 @@ namespace MvcAWSPostgresEC2.Repositories
             return await this.context.Departamentos.ToListAsync();
         }
 
-        public async Task<Departamento> DepartamentoAsync(int id)
+        public async Task<Departamento> FindDepartamentoAsync(int id)
         {
             return await this.context.Departamentos
                 .FirstOrDefaultAsync(x => x.IdDepartamento == id);
